@@ -14,7 +14,5 @@
 </script>
 
 <style>
-  #app {
-    background-color: #efefef;
-  }
+
 </style>
