@@ -66,7 +66,7 @@
           // 保存token
           window.sessionStorage.setItem('token', res.data.token)
           // 跳转页面
-          this.$router.push('/home')
+          this.$router.replace('/home')
         })
       }
     }
