@@ -35,25 +35,32 @@
         style="width: 100%"
         v-loading="loading">
         <el-table-column
+          :align="'center'"
+          width="20px"
           type="index">
         </el-table-column>
         <el-table-column
+          :align="'center'"
           prop="username"
           label="姓名">
         </el-table-column>
         <el-table-column
+          :align="'center'"
           prop="email"
           label="邮箱">
         </el-table-column>
         <el-table-column
+          :align="'center'"
           prop="mobile"
           label="电话">
         </el-table-column>
         <el-table-column
+          :align="'center'"
           prop="role_name"
           label="角色">
         </el-table-column>
         <el-table-column
+          :align="'center'"
           label="状态">
           <template slot-scope="scope">
             <el-switch 
@@ -65,6 +72,7 @@
           </template>
         </el-table-column>
         <el-table-column
+          :align="'center'"
           label="操作"
           width="200px">
           <template slot-scope="scope">
@@ -288,7 +296,7 @@
           // 发起添加用户请求
           const {data: res} = await this.$http.post('users', this.addForm)
           if (res.meta.status !== 201) {
-            this.$message.error('添加用户失败!')
+            return this.$message.error('添加用户失败!')
           }
           this.$message.success('添加用户成功!')
           this.addDialogVisible = false
@@ -312,7 +320,7 @@
       updateUser() {
         this.$refs.editFormRef.validate(async valid => {
           if (!valid) return 
-          console.log(this.editForm.email, this.editForm.mobile);
+          // console.log(this.editForm.email, this.editForm.mobile);
           const {data: res} = await this.$http.put(`users/${this.editForm.id}`, {
             email: this.editForm.email,
             mobile: this.editForm.mobile,
