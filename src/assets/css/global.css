@@ -6,9 +6,6 @@ html, body, #app {
   background-color: #efefef;
 }
 
-::-webkit-scrollbar {
-  width: 0 !important;
-}
-::-webkit-scrollbar {
-  width: 0 !important;height: 0;
+.ql-editor {
+  min-height: 300px;
 }

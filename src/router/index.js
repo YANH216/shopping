@@ -10,6 +10,7 @@ import Order from '../pages/Order'
 import Product from '../pages/Product'
 import Roles from '../pages/Roles'
 import Sort from '../pages/Sort'
+import AddProduct from '../pages/AddProduct'
 
 const router = new VueRouter({
   routes: [
@@ -47,7 +48,11 @@ const router = new VueRouter({
         },
         {
           path: '/goods',
-          component: Product
+          component: Product,
+        },
+        {
+          path: '/goods/add',
+          component: AddProduct
         },
         {
           path: '/params',
